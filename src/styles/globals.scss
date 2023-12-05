@@ -1,0 +1,94 @@
+@import "./helpers/text";
+@import "./variables/colors";
+@import "./variables/base";
+@import "./mixins";
+@import "~react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: $color-text;
+  background-color: $color-background;
+  font-size: 16px;
+  letter-spacing: .45px;
+  line-height: 24px;
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  @include scrollbar-wide;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+iframe {
+  border: none;
+  border-radius: $base-radius-medium;
+}
+
+table {
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+input,
+select,
+option {
+  outline: none;
+  border: none;
+  font-size: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.yt-lite {
+  border: none;
+  border-radius: $base-radius-medium;
+
+  &>iframe {
+    height: auto;
+  }
+
+  &>.lty-playbtn {
+    background-color: red;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: .35px;
+  }
+}

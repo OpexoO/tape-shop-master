@@ -1,0 +1,14 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+.sortingContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 440px) {
+  .sortingContainer {
+    justify-content: center;
+  }
+}

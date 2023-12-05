@@ -1,0 +1,70 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+.policyIndent {
+  margin-bottom: $base-space-size-middle-plus;
+}
+
+.shippingTitle {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: $base-space-size-small;
+}
+
+.listItem {
+  margin-left: 18px;
+}
+
+.policyBlock {
+  margin-bottom: $base-space-size-large;
+  line-height: 26px;
+}
+
+.policyBlockTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: $base-space-size-tiny;
+}
+
+.shippingAddressBlock {
+  display: flex;
+  column-gap: $base-space-size-enormous;
+  row-gap: $base-space-size-small;
+}
+
+.shippingAddress {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-space-size-tiny;
+}
+
+.link {
+  color: $color-primary;
+  transition: color .3s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-primary-dark;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .policyBlockTitle {
+    font-size: 14px;
+  }
+
+  .policyBlock {
+    line-height: 24px;
+  }
+
+  .shippingTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .shippingAddressBlock {
+    flex-direction: column;
+  }
+}

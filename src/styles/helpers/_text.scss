@@ -1,0 +1,57 @@
+@import "../variables/base.scss";
+@import "../variables/colors.scss";
+
+.bold {
+  font-weight: 700;
+}
+
+.centered {
+  text-align: center;
+}
+
+.container {
+  padding: $base-space-size-enormous $base-space-container;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 38px;
+  color: $color-primary;
+  margin-bottom: $base-space-size-medium;
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 40px 340px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .container {
+    padding: 40px 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container {
+    padding: 24px;
+  }
+}

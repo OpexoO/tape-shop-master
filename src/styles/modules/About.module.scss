@@ -1,0 +1,37 @@
+@import "../variables/base";
+
+.aboutText {
+  margin-bottom: $base-space-size-medium;
+}
+
+.about {
+  display: flex;
+  column-gap: $base-space-size-huge;
+}
+
+.aboutItem {
+  width: 50%;
+  margin-bottom: $base-space-size-large;
+}
+
+.video {
+  max-width: 550px;
+  aspect-ratio: 1.67;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutText {
+    margin-bottom: $base-space-size-small;
+  }
+
+  .aboutItem {
+    width: 100%;
+    margin-bottom: $base-space-size-medium;
+  }
+}

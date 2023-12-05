@@ -1,0 +1,121 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+.ordersContainer {
+  color: $product-text;
+  margin: $base-space-size-huge 0;
+}
+
+.ordersEmpty {
+  margin-bottom: $base-space-size-medium;
+}
+
+.orderItem {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-space-size-medium;
+  border-top: 1px solid black;
+  padding-top: $base-space-size-medium;
+  margin-top: $base-space-size-large;
+}
+
+.orderItemHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderItemBlocks {
+  display: flex;
+  align-items: center;
+  column-gap: calc($base-space-size-enormous * 2);
+}
+
+.orderItemBlocksModal {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 24px;
+  flex-wrap: wrap;
+}
+
+.orderItemBlocksModalSm {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 8px;
+  flex-wrap: wrap;
+}
+
+.orderItemBlockWithIndent {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-space-size-tiny;
+  margin-top: 12px;
+}
+
+.orderItemBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-space-size-tiny;
+}
+
+.link {
+  color: $color-primary;
+  transition: color .4s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-primary-dark;
+  }
+}
+
+.modalIndent {
+  margin: $base-space-size-medium 0;
+}
+
+@media screen and (max-width: 1366px) {
+  .orderItem {
+    width: 76%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .orderItem {
+    width: 90%;
+    row-gap: $base-space-size-middle-plus;
+    padding-top: $base-space-size-middle-plus;
+    margin-top: $base-space-size-medium;
+  }
+
+  .orderItemBlock {
+    row-gap: $base-space-size-tiniest;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ordersContainer {
+    margin: $base-space-size-large 0;
+  }
+
+  .orderItemBlocks {
+    column-gap: $base-space-size-enormous;
+    flex-wrap: wrap;
+    row-gap: $base-space-size-small;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .orderItem {
+    width: 100%;
+  }
+
+  .link {
+    width: fit-content;
+  }
+
+  .orderItemHeader {
+    flex-direction: column;
+    row-gap: $base-space-size-tiniest;
+  }
+}

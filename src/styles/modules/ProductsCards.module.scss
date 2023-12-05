@@ -1,0 +1,113 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+$text-color: #3a3f45;
+
+.aboutProducts {
+  margin-top: $base-space-size-enormous;
+}
+
+.productsTitle {
+  font-size: 34px;
+  margin-bottom: $base-space-size-large;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  column-gap: $base-space-size-huge;
+  row-gap: $base-space-size-large;
+  color: $text-color;
+}
+
+.productCardContainer {
+  max-width: 400px;
+  width: 30%;
+  background-color: $color-white;
+  text-align: center;
+  border-radius: $base-radius-large;
+  transition: box-shadow .6s ease-in-out;
+
+  &:not(.noShadow):hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 20px -2px rgba(66, 68, 90, 1);
+  }
+
+  // test
+  &:hover {
+    .productImgTest {
+      background-size: 115%;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, .2);
+    }
+  }
+}
+
+.productCard {
+  padding: $base-space-size-large;
+}
+
+.productTitle {
+  margin-bottom: $base-space-size-medium;
+  font-size: 24px;
+}
+
+.productImg {
+  min-height: 200px;
+  width: 100%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.productBtn {
+  display: inline-block;
+  margin-top: $base-space-size-medium;
+  padding: $base-space-size-middle $base-space-size-medium;
+  border-radius: $base-radius-large;
+  border: 2px solid $text-color;
+  transition: background-color .2s ease-in;
+
+  &:hover {
+    background-color: $color-background;
+  }
+}
+
+// test one
+.productImgTest {
+  position: relative;
+  transition: .8s ease-out;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: $base-radius-medium;
+  z-index: 2;
+  transition: .8s ease-out;
+}
+
+@media screen and (max-width: 800px) {
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productCardContainer {
+    width: 85%;
+  }
+
+  .productImg {
+    min-height: 120px;
+    background-size: 55%;
+  }
+
+  .productsTitle {
+    font-size: 28px;
+  }
+}

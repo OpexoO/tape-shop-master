@@ -1,0 +1,241 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+$section-width: 45%;
+$section-width-mobile: 100%;
+
+.dispenser {
+  padding-top: 0;
+}
+
+.dispenserTitle {
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.dispenserBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:first-of-type) {
+    margin-bottom: $base-space-size-enormous;
+  }
+
+  &:last-of-type {
+    padding: #{$base-space-size-enormous + $base-space-size-medium} 0;
+  }
+}
+
+.dispenserBlockReverse {
+  flex-direction: row-reverse;
+}
+
+.dispenserImg {
+  width: $section-width;
+  max-width: 580px;
+  aspect-ratio: 1;
+  height: auto;
+}
+
+.dispenserItem {
+  width: $section-width;
+}
+
+.dispenserVideo {
+  width: $section-width;
+  aspect-ratio: 1.75;
+  height: auto;
+}
+
+.dispenserIndent {
+  margin-bottom: $base-space-size-middle-plus;
+}
+
+.dispenserSection {
+  margin-top: $base-space-size-medium;
+
+  &:first-child {
+    margin-top: $base-space-size-large;
+  }
+}
+
+.dispenserSectionTitle {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: $base-space-size-middle-plus;
+}
+
+.dispenserOrder {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto $base-space-size-large;
+}
+
+.dispenserOrderText {
+  margin-bottom: $base-space-size-huge;
+}
+
+.systainerOptions {
+  margin-top: $base-space-size-huge;
+  margin-bottom: $base-space-size-huge;
+}
+
+.systainerOptionsTitle {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.systainerOptionsItem {
+  display: flex;
+  align-items: center;
+  column-gap: $base-space-size-medium;
+  margin-bottom: $base-space-size-small;
+}
+
+.systainerOptionsIcon {
+  width: $base-avatar-size-small;
+  height: $base-avatar-size-small;
+  color: $color-primary;
+}
+
+.tapeList {
+  margin-top: $base-space-size-medium;
+  margin-bottom: $base-space-size-medium;
+}
+
+.tapeListIcon {
+  width: $base-avatar-size-tiny;
+  height: $base-avatar-size-tiny;
+  color: $color-primary;
+}
+
+.tapeListItem {
+  margin-bottom: $base-space-size-tiny;
+  display: flex;
+  align-items: center;
+  column-gap: $base-space-size-small;
+}
+
+.tapeBtn {
+  display: block;
+  width: fit-content;
+  background-color: $color-primary;
+  color: $color-white;
+  transition: background-color .3s ease;
+  padding: $base-space-size-middle $base-space-size-large;
+  border-radius: $base-radius-large;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-dark;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dispenserBlock {
+    &:last-of-type {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dispenser {
+    padding-top: $base-space-size-enormous;
+  }
+
+  .dispenserBlock {
+    text-align: center;
+    flex-direction: column;
+
+    &:not(:first-of-type) {
+      margin-bottom: $base-space-size-huge;
+    }
+  }
+
+  .dispenserBlockMobile {
+    flex-flow: column-reverse;
+  }
+
+  .dispenserTitle {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .dispenserImg {
+    width: $section-width-mobile;
+    max-width: 380px;
+    aspect-ratio: 1.1;
+    height: auto;
+  }
+
+  .dispenserItem {
+    width: $section-width-mobile;
+  }
+
+  .dispenserVideoContainer {
+    margin-top: $base-space-size-medium;
+  }
+
+  .dispenserVideo {
+    width: calc($section-width-mobile - 10%);
+  }
+
+  .dispenserOrderText {
+    margin-bottom: $base-space-size-large;
+  }
+
+  .dispenserOrder {
+    width: 100%;
+    margin: $base-space-size-enormous 0 0;
+  }
+
+  .systainerOptions {
+    margin-top: $base-space-size-large;
+    margin-bottom: $base-space-size-large;
+  }
+
+  .systainerOptionsTitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .typeItemMobile {
+    margin-top: $base-space-size-medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tapeList {
+    margin-top: $base-space-size-middle-plus;
+    margin-bottom: $base-space-size-middle-plus;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .dispenser {
+    padding-top: $base-space-size-large;
+  }
+
+  .dispenserBlock {
+    &:not(:first-of-type) {
+      margin-bottom: $base-space-size-large;
+    }
+  }
+
+  .dispenserSectionTitle {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: $base-space-size-small;
+  }
+
+  .dispenserOrder {
+    margin: $base-space-size-huge 0 0;
+  }
+
+  .tapeBtn {
+    padding: $base-space-size-small $base-space-size-medium;
+  }
+}

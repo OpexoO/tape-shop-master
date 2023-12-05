@@ -1,0 +1,67 @@
+@import "../variables/colors";
+@import "../variables/base";
+
+.usageContainer {
+  line-height: 22px;
+  padding-top: $base-space-size-huge;
+  padding-bottom: $base-space-size-huge;
+  color: $color-secondary;
+
+  &:nth-child(2n+1) {
+    background-color: $color-background;
+  }
+
+  &:nth-child(2n) {
+    background-color: $color-white;
+  }
+}
+
+.usageBlock {
+  display: flex;
+  justify-content: space-between;
+
+  &>section {
+    flex-basis: 48%;
+  }
+}
+
+.usageText {
+  margin-bottom: $base-space-size-middle-plus;
+}
+
+.usageListItem {
+  margin-bottom: $base-space-size-tiniest;
+}
+
+.usageIcon {
+  width: $base-avatar-size-tiny;
+  height: $base-avatar-size-tiny;
+  margin-right: $base-space-size-small;
+  color: $color-primary;
+}
+
+@media screen and (max-width: 800px) {
+  .usageContainer {
+    text-align: center;
+    padding-top: $base-space-size-large;
+    padding-bottom: $base-space-size-large;
+
+    & h2 {
+      margin-bottom: $base-space-size-middle-plus;
+    }
+  }
+
+  .usageIcon {
+    width: $base-space-size-middle-plus;
+    height: $base-space-size-middle-plus;
+  }
+
+  .usageText {
+    margin-bottom: $base-space-size-small;
+  }
+
+  .usageBlock {
+    flex-direction: column;
+    row-gap: $base-space-size-medium;
+  }
+}

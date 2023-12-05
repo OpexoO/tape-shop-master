@@ -1,0 +1,45 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+$color: #515151;
+
+.tabs {
+  width: 100%;
+  display: flex;
+  color: $color;
+  border-top: 1px solid $border-color;
+}
+
+.tab {
+  cursor: pointer;
+  position: relative;
+  padding: $base-space-size-small 0;
+  margin-right: $base-space-size-large;
+  transition: opacity .3s ease;
+  user-select: none;
+  text-align: center;
+
+  &:hover {
+    opacity: .85;
+  }
+}
+
+.tabActive {
+  &:before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-primary;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.tabContent {
+  margin-top: $base-space-size-large;
+}

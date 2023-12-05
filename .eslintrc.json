@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb-base",
+    "plugin:security/recommended"
+  ],
+  "rules": {
+    "object-curly-newline": "off",
+    "lines-between-class-members": "off",
+    "import/extensions": "off",
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "no-undef": "off",
+    "vars-on-top": "off",
+    "prefer-promise-reject-errors": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 110
+      }
+    ],
+    "security/detect-object-injection": "off",
+    "security/detect-non-literal-regexp": "off",
+    "security/detect-unsafe-regex": "off"
+  },
+  "ignorePatterns": [
+    ".env*.local"
+  ]
+}

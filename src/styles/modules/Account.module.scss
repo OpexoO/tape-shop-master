@@ -1,0 +1,121 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+.wrapper {
+  color: $product-text;
+}
+
+.formWrapper {
+  margin-top: $base-space-size-huge;
+  padding: $base-space-size-large;
+  border: 1px solid $border-color;
+  border-radius: $base-radius-medium;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-space-size-medium;
+  margin-bottom: $base-space-size-medium;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base-space-size-tiny;
+}
+
+.formLabel {
+  font-size: 15px;
+  font-weight: 700;
+
+  &:after {
+    content: '*';
+    color: red;
+    margin-left: $base-space-size-tiny;
+  }
+}
+
+.formInput {
+  padding: $base-space-size-small;
+  border: 1px solid $border-color;
+  border-radius: $base-radius-medium;
+}
+
+.formActions {
+  display: flex;
+  column-gap: $base-space-size-large;
+}
+
+.formBtn {
+  width: fit-content;
+  padding: $base-space-size-middle $base-space-size-large;
+  border-radius: $base-radius-large;
+  background-color: $color-primary;
+  color: $color-white;
+  transition: background-color .4s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-dark;
+  }
+}
+
+.link {
+  width: fit-content;
+  color: $color-primary;
+  transition: color .4s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-primary-dark;
+  }
+}
+
+.indentSm {
+  display: block;
+  margin-bottom: $base-space-size-tiny;
+}
+
+.indentSm {
+  display: block;
+  margin-bottom: $base-space-size-tiny;
+}
+
+.indentL {
+  display: block;
+  margin-bottom: $base-space-size-large;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.verifyLink {
+  color: $color-primary;
+  transition: color .3s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-primary-dark;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .formWrapper {
+    margin-top: 0;
+  }
+
+  .formActions {
+    column-gap: $base-space-size-medium;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .formWrapper {
+    margin-top: 0;
+    padding: $base-space-size-medium;
+  }
+}

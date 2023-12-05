@@ -1,0 +1,32 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+.rateContainer {
+  display: flex;
+  color: $product-text;
+}
+
+.rateContainerDynamic {
+  cursor: pointer;
+}
+
+.rateIcon {
+  width: $base-avatar-size-tiny;
+  height: $base-avatar-size-tiny;
+}
+
+.rateIconDynamic {
+  width: $base-avatar-size-small;
+  height: $base-avatar-size-small;
+}
+
+.rateIconFilled {
+  fill: $product-text;
+}
+
+@media screen and (max-width: 800px) {
+  .rateIconDynamic {
+    width: $base-avatar-size-tiny;
+    height: $base-avatar-size-tiny;
+  }
+}

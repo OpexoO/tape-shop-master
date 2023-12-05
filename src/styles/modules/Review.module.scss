@@ -1,0 +1,172 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+$secondary-text: #777777;
+
+.reviews {
+  margin-bottom: $base-space-size-enormous;
+}
+
+.reviewCard {
+  display: flex;
+  column-gap: $base-space-size-large;
+  margin-bottom: $base-space-size-large;
+}
+
+.reviewCardImage {
+  width: $base-avatar-size-large;
+  height: $base-avatar-size-large;
+  border-radius: 100%;
+}
+
+.reviewCardMeta {
+  display: flex;
+  align-items: center;
+  column-gap: $base-space-size-small;
+  color: $secondary-text;
+  margin-bottom: $base-space-size-small;
+}
+
+.reviewCardName {
+  font-size: 18px;
+}
+
+.reviewCardDate {
+  font-size: 12px;
+}
+
+.reviewCardText {
+  margin-top: $base-space-size-middle;
+}
+
+.reviewFormContainer {
+  padding: $base-space-size-large;
+  margin-bottom: $base-space-size-enormous;
+  border: 1px solid $border-color;
+}
+
+.reviewFormTitle {
+  font-size: 20px;
+  margin-bottom: $base-space-size-tiny;
+}
+
+.reviewForm {
+  margin-top: $base-space-size-medium;
+}
+
+.reviewFormLabel {
+  font-size: 16px;
+  margin-bottom: $base-space-size-tiny;
+  display: block;
+}
+
+.reviewFormArea {
+  height: 90px;
+}
+
+.reviewFormItem {
+  width: 100%;
+  margin-bottom: $base-space-size-medium;
+}
+
+.reviewFormRating {
+  display: flex;
+  align-items: center;
+  column-gap: $base-space-size-medium;
+}
+
+.reviewFormBlock {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: $base-space-size-large;
+}
+
+.reviewFormInput {
+  width: 100%;
+  padding: $base-space-size-middle;
+  border-radius: $base-radius-medium;
+  outline: none;
+  border: 1px solid $border-color;
+}
+
+.reviewFormCheckboxBlock {
+  display: flex;
+  column-gap: $base-space-size-small;
+}
+
+.reviewFormBtn {
+  padding: $base-space-size-middle $base-space-size-large;
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: $base-radius-large;
+  transition: background-color .3s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-primary-dark;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .reviews {
+    margin-bottom: $base-space-size-huge;
+  }
+
+  .reviewCard {
+    column-gap: $base-space-size-medium;
+  }
+
+  .reviewCardImage {
+    width: $base-avatar-size-middle;
+    height: $base-avatar-size-middle;
+  }
+
+  .reviewCardMeta {
+    margin-bottom: $base-space-size-tiny;
+  }
+
+  .reviewCardName {
+    font-size: 16px;
+  }
+
+  .reviewCardText {
+    margin-top: $base-space-size-small;
+  }
+
+  .reviewFormTitle {
+    font-size: 18px;
+  }
+
+  .reviewFormLabel {
+    font-size: 15px;
+  }
+
+  .reviewFormBlock {
+    flex-direction: column;
+  }
+
+  .reviewFormInput {
+    padding: $base-space-size-small;
+  }
+
+  .reviewFormBtn {
+    padding: $base-space-size-small $base-space-size-medium;
+  }
+
+  .reviewFormRating {
+    column-gap: $base-space-size-middle-plus;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .reviewFormContainer {
+    padding: $base-space-size-medium;
+  }
+}

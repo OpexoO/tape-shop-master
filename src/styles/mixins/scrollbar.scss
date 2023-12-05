@@ -1,0 +1,39 @@
+@mixin scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #E6E8EB #C1C7CD;
+  -webkit-overflow-scrolling: touch; // Used to avoid Safari mobile dividing scrollbar into several scrollbars depending on containers
+
+  &::-webkit-scrollbar {
+    width: 20px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #808283;
+    border: 8px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box; // this property + border 'cuts down' thumb to appear only 4px in width
+    border-radius: 12px;
+    min-height: 25px;
+  }
+}
+
+@mixin scrollbar-wide {
+  @include scrollbar;
+
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 5px solid rgba(0, 0, 0, 0);
+    border-radius: 12px;
+  }
+}

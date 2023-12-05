@@ -1,0 +1,64 @@
+@import "../variables/base";
+@import "../variables/colors";
+
+.drawerContainer {
+  cursor: default;
+  background-color: transparent;
+  transform: translateX(100%);
+  overflow: hidden;
+  width: 100vw;
+  height: 100%;
+  text-align: left;
+  transition: transform, background-color .4s ease;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.drawerContainerOpened {
+  background-color: rgba(0, 0, 0, .25);
+  transform: translateX(0);
+}
+
+.drawer {
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform .4s ease;
+  padding: $base-space-size-large;
+  background-color: $color-white;
+  height: 100%;
+  width: 350px;
+  max-width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  color: $color-secondary;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.drawerOpened {
+  transform: translateX(0);
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: $base-space-size-middle-plus;
+}
+
+.drawerIcon {
+  cursor: pointer;
+}
+
+.drawerBody {
+  height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .drawerHeader {
+    margin-bottom: $base-space-size-medium;
+  }
+}
